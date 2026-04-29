@@ -14,7 +14,9 @@ import javafx.stage.Stage;
 
 public class FensterTestController {
 	
-	
+	   @FXML
+	    private Button btEmir;
+
 	
     @FXML
     private Button btDrücken;
@@ -22,6 +24,22 @@ public class FensterTestController {
     @FXML
     private TextField tfAnzeige;
 
+    @FXML
+    void EmirDrücken(ActionEvent event) throws IOException {
+    	Stage stage2 = new Stage();
+    	FXMLLoader loader = new FXMLLoader();
+    	loader.setLocation(getClass().getResource("EmirSeite.fxml"));
+    	Parent root = loader.load();
+        EmirSeiteController controller3 = loader.getController();  //Braucht man nur, wenn man Werte aus dem neuen Fenster zurückgeben will
+        stage2.setScene(new Scene(root));
+        stage2.setTitle("Das ist das 3. Fenster");
+        stage2.initModality(Modality.APPLICATION_MODAL); // Dann kann das alte Fenster nicht mehr aktiv sein
+      
+        stage2.showAndWait();
+        tfAnzeige.setText(controller3.getText()); //Holt aus dem schließenden Fenster den Wert
+    }
+
+    
     @FXML
     void drueckenSchaltflaeche(ActionEvent event) throws IOException 
     {
