@@ -17,7 +17,7 @@ public class NaasnerFenster extends Stage {
 	
 	public NaasnerFenster() {
 		super();
-		setTitle("Zweite Fenster");
+		setTitle("Zweite Fenster m");
 		initModality(Modality.APPLICATION_MODAL);
 		
 		Label label = new Label("Say something: ");
