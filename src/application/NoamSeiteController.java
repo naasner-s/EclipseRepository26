@@ -41,6 +41,8 @@ public class NoamSeiteController {
     
     Image bild;
     
+    MediaPlayer mediaPlayer;
+    
     
 
     @FXML
@@ -68,8 +70,23 @@ public class NoamSeiteController {
 	}
 
 	@FXML
+	void initialize()
+	{
+		File file = new File("H:/Downloads/DBZ OP Instrumental.mp4");
+    	String path = file.toURI().toString();
+		media = new Media(path);
+        //Media media = new Media("H:/Downloads/DBZ OP Instrumental.mp4");
+        mediaPlayer = new MediaPlayer(media);
+        mv.setMediaPlayer(mediaPlayer);
+        mv.setPreserveRatio(true);
+        mv.setFitWidth(600);
+        mediaPlayer.play();
+	}
+	
+	@FXML
     void sliderAnzeige(ActionEvent event) {
     	tfSD.setText(String.valueOf(sd.getValue()));
+    	/*
     	File file = new File("H:/Downloads/DBZ OP Instrumental.mp4");
     	String path = file.toURI().toString();
 
@@ -77,6 +94,7 @@ public class NoamSeiteController {
         //Media media = new Media("H:/Downloads/DBZ OP Instrumental.mp4");
         MediaPlayer mediaPlayer = new MediaPlayer(media);
         mv.setMediaPlayer(mediaPlayer);
+        */
     	
     }
 
