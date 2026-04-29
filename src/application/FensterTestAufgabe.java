@@ -10,27 +10,27 @@ import javafx.scene.layout.BorderPane;
 
 public class FensterTestAufgabe extends Application 
 {
-	Stage meineBÃ¼hne;
-	AnchorPane meinBÃ¼hnenbild;
+	Stage meineBühne;
+	AnchorPane meinBühnenbild;
 	
 	@Override
 	public void start(Stage primaryStage) {
-		meineBÃ¼hne=primaryStage;
+		meineBühne=primaryStage;
 					
 		try 
 		{
 		   FXMLLoader lLoader = new FXMLLoader();
 		   lLoader.setLocation(FensterTestAufgabe.class.getResource("FensterTestView.fxml"));
-		   meinBÃ¼hnenbild= (AnchorPane) lLoader.load();
+		   meinBühnenbild= (AnchorPane) lLoader.load();
 			
 		} 
 		catch(Exception e) 
 		{
 			e.printStackTrace();
 		}
-		Scene lScene = new Scene(meinBÃ¼hnenbild);
-		meineBÃ¼hne.setScene(lScene);
-		meineBÃ¼hne.show();
+		Scene lScene = new Scene(meinBühnenbild);
+		meineBühne.setScene(lScene);
+		meineBühne.show();
 	}
 	
 	public static void main(String[] args) {

@@ -17,8 +17,11 @@ public class FensterTestController {
 	
 	
     @FXML
-    private Button btDrücken;
+    private Button btDruecken;
 
+    @FXML
+    private Button btDario;
+    
     @FXML
     private TextField tfAnzeige;
 
@@ -38,6 +41,29 @@ public class FensterTestController {
         tfAnzeige.setText(controller2.getText()); //Holt aus dem schließenden Fenster den Wert
             	
 	}
+    
+
+    @FXML
+    void drueckenFensterDario(ActionEvent event) throws IOException
+    {
+
+    	Stage stage3 = new Stage();
+    	FXMLLoader loader = new FXMLLoader();
+    	loader.setLocation(getClass().getResource("DarioSeite.fxml"));
+    	Parent root = loader.load();
+        DarioSeiteController controller3 = loader.getController();  //Braucht man nur, wenn man Werte aus dem neuen Fenster zurückgeben will
+        stage3.setScene(new Scene(root));
+        stage3.setTitle("Dario Fenster");
+        stage3.initModality(Modality.APPLICATION_MODAL); // Dann kann das alte Fenster nicht mehr aktiv sein
+      
+        stage3.showAndWait();
+        tfAnzeige.setText(controller3.getText()); //Holt aus dem schließenden Fenster den Wert
+    	
+    }
+    
+    
+    
+    
  }
 
 
