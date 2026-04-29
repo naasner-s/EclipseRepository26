@@ -18,7 +18,10 @@ public class FensterTestController {
 	
     @FXML
     private Button btDrücken;
-
+    
+    @FXML
+    private Button btDrücken2;
+    
     @FXML
     private TextField tfAnzeige;
 
@@ -38,6 +41,23 @@ public class FensterTestController {
         tfAnzeige.setText(controller2.getText()); //Holt aus dem schließenden Fenster den Wert
             	
 	}
+    
+    @FXML
+    void drueckenSchaltflaeche2(ActionEvent event) throws IOException 
+    {
+    	Stage stage2 = new Stage();
+    	FXMLLoader loader = new FXMLLoader();
+    	loader.setLocation(getClass().getResource("RomanSeite.fxml"));
+    	Parent root = loader.load();
+    	RomanSeiteController controller2 = loader.getController();
+    	stage2.setScene(new Scene(root));
+        stage2.setTitle("Das ist das 2. Fenster");
+        stage2.initModality(Modality.APPLICATION_MODAL);
+        
+        stage2.showAndWait();
+        tfAnzeige.setText(controller2.getText());
+    }
+    
  }
 
 
