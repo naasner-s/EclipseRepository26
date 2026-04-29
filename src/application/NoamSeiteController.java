@@ -3,6 +3,9 @@ package application;
 
 
 
+import java.io.File;
+
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -10,9 +13,15 @@ import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.MediaView;
 import javafx.stage.Stage;
 
 public class NoamSeiteController {
+	Media media;
+	@FXML
+    private MediaView mv;
 	  @FXML
 	    private ImageView iv;
 
@@ -61,6 +70,13 @@ public class NoamSeiteController {
 	@FXML
     void sliderAnzeige(ActionEvent event) {
     	tfSD.setText(String.valueOf(sd.getValue()));
+    	File file = new File("H:/Downloads/DBZ OP Instrumental.mp4");
+    	String path = file.toURI().toString();
+
+    	Media media = new Media(path);
+        //Media media = new Media("H:/Downloads/DBZ OP Instrumental.mp4");
+        MediaPlayer mediaPlayer = new MediaPlayer(media);
+        mv.setMediaPlayer(mediaPlayer);
     	
     }
 
