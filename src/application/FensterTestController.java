@@ -18,9 +18,17 @@ public class FensterTestController {
 	
     @FXML
     private Button btDrücken;
+    
+    @FXML
+    private Button btNoam;
 
     @FXML
     private TextField tfAnzeige;
+
+    @FXML
+    void btNoam(ActionEvent event) {
+
+    }
 
     @FXML
     void drueckenSchaltflaeche(ActionEvent event) throws IOException 
