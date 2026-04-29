@@ -52,7 +52,7 @@ public class FensterTestController {
         stage2.initModality(Modality.APPLICATION_MODAL); // Dann kann das alte Fenster nicht mehr aktiv sein
       
         stage2.showAndWait();
-        tfAnzeige.setText(controller2.getText()); //Holt aus dem schließenden Fenster den Wert
+        tfAnzeige.setText(controller2.getRückgabe()); //Holt aus dem schließenden Fenster den Wert
             	
 	}
  }
