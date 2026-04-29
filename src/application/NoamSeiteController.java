@@ -1,13 +1,21 @@
 package application;
 
+
+
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 public class NoamSeiteController {
+	  @FXML
+	    private ImageView iv;
+
 	 @FXML
 	    private Button btSD;
 	 @FXML
@@ -21,6 +29,10 @@ public class NoamSeiteController {
 
     @FXML
     private TextField tfText;
+    
+    Image bild;
+    
+    
 
     @FXML
     void schließenFenster(ActionEvent event) {
@@ -30,10 +42,23 @@ public class NoamSeiteController {
         	setText(tfSD.getText());
         else
         	setText(tfText.getText());
+        setBild(iv.getImage());
+        
+        
+        
 
 
     }
-    @FXML
+    
+	public Image getBild() {
+		return bild;
+	}
+
+	public void setBild(Image bild) {
+		this.bild = bild;
+	}
+
+	@FXML
     void sliderAnzeige(ActionEvent event) {
     	tfSD.setText(String.valueOf(sd.getValue()));
     	

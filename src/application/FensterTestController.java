@@ -9,13 +9,19 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class FensterTestController {
 	
+	Image bild;
 	
+	 @FXML
+	    private ImageView iv2;
+
 	
     @FXML
     private Button btDrücken;
@@ -41,6 +47,11 @@ public class FensterTestController {
       
         stage3.showAndWait();
         tfAnzeige.setText(controller2.getText()); //Holt aus dem schließenden Fenster den Wert
+        bild = controller2.getBild();
+        iv2.setImage(bild);
+        
+        
+        
     }
 
     @FXML
