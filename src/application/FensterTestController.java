@@ -2,6 +2,7 @@ package application;
 
 import java.io.IOException;
 
+import javafx.css.CssParser.ParseError.StringParsingError;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -55,7 +56,7 @@ public class FensterTestController {
         stage2.initModality(Modality.APPLICATION_MODAL);
         
         stage2.showAndWait();
-        tfAnzeige.setText(controller2.getText());
+        tfAnzeige.setText(String.valueOf(controller2.getText()));
     }
     
  }
