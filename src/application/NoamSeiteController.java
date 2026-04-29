@@ -26,8 +26,11 @@ public class NoamSeiteController {
     void schließenFenster(ActionEvent event) {
     	Stage stage = (Stage) btSchließen.getScene().getWindow();
         stage.close();
-    	//setText(tfText.getText());
-    	setText(tfSD.getText());
+        if(tfText.getText().isEmpty())
+        	setText(tfSD.getText());
+        else
+        	setText(tfText.getText());
+
 
     }
     @FXML
