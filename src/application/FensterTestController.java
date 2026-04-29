@@ -18,7 +18,9 @@ public class FensterTestController {
 	
     @FXML
     private Button btDrücken;
-
+    @FXML
+    private Button btDrücken1;
+  
     @FXML
     private TextField tfAnzeige;
 
