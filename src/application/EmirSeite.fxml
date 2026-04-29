@@ -3,15 +3,24 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.media.MediaView?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.EmirSeiteController">
+<AnchorPane prefHeight="328.0" prefWidth="460.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.EmirSeiteController">
    <children>
-      <AnchorPane prefHeight="234.0" prefWidth="324.0">
+      <AnchorPane layoutX="-8.0" layoutY="-12.0" prefHeight="370.0" prefWidth="615.0">
          <children>
             <Button fx:id="btSchließen" layoutX="36.0" layoutY="43.0" mnemonicParsing="false" onAction="#schließenFenster" text="Schließen" />
             <TextField fx:id="tfText" layoutX="69.0" layoutY="162.0" prefHeight="25.0" prefWidth="244.0" promptText="Naasner war hier" />
             <Label layoutX="55.0" layoutY="134.0" text="mein Rückgabetext ist:" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="75.0" layoutY="206.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../Pictures/daaffcd397a70b20843958a9eefe97ba.jpg" />
+               </image>
+            </ImageView>
+            <MediaView fx:id="mediaView" fitHeight="200.0" fitWidth="200.0" layoutX="351.0" layoutY="75.0" />
          </children>
       </AnchorPane>
    </children>
