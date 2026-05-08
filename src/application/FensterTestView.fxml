@@ -13,8 +13,6 @@
             <Button fx:id="btDrücken" layoutX="42.0" layoutY="27.0" mnemonicParsing="false" onAction="#drueckenBTnaasner" text="FensterNaasner" />
             <TextField fx:id="tfAnzeige" layoutX="67.0" layoutY="231.0" prefHeight="25.0" prefWidth="278.0" promptText="?" />
 
-            
-
             <Button layoutX="41.0" layoutY="59.0" mnemonicParsing="false" onAction="#btNoam" prefHeight="25.0" prefWidth="99.0" text="FensterNoam" />
             <ImageView fx:id="iv2" fitHeight="150.0" fitWidth="200.0" layoutX="167.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" />
 
