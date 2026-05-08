@@ -8,9 +8,9 @@
    <children>
       <AnchorPane layoutX="-22.0" prefHeight="270.0" prefWidth="389.0">
          <children>
-            <Button fx:id="btDrücken" layoutX="42.0" layoutY="27.0" mnemonicParsing="false" onAction="#drueckenSchaltflaeche" text="FensterNejem" />
+            <Button fx:id="btDrücken" layoutX="42.0" layoutY="27.0" mnemonicParsing="false" onAction="#drueckenSchaltflaeche2" text="FensterNejem" />
             <TextField fx:id="tfAnzeige" layoutX="67.0" layoutY="231.0" prefHeight="25.0" prefWidth="278.0" promptText="?" />
-            <Button fx:id="btDrücken1" layoutX="42.0" layoutY="65.0" mnemonicParsing="false" onAction="#drueckenSchaltflaeche2" text="FensterNejem Number One" />
+            <Button fx:id="btDrücken1" layoutX="42.0" layoutY="65.0" mnemonicParsing="false" onAction="#drueckenSchaltflaeche" text="FensterNejem Number One" />
          </children></AnchorPane>
    </children>
 </AnchorPane>
