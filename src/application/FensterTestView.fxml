@@ -9,10 +9,14 @@
    <children>
       <AnchorPane layoutX="-22.0" prefHeight="270.0" prefWidth="389.0">
          <children>
-            <Button fx:id="btDrücken" layoutX="42.0" layoutY="27.0" mnemonicParsing="false" onAction="#drueckenSchaltflaeche" text="FensterNaasner" />
+            <Button fx:id="btDrücken" layoutX="42.0" layoutY="27.0" mnemonicParsing="false" onAction="#drueckenBTnaasner" text="FensterNaasner" />
             <TextField fx:id="tfAnzeige" layoutX="67.0" layoutY="231.0" prefHeight="25.0" prefWidth="278.0" promptText="?" />
+
             <Button layoutX="41.0" layoutY="59.0" mnemonicParsing="false" onAction="#btNoam" prefHeight="25.0" prefWidth="99.0" text="FensterNoam" />
             <ImageView fx:id="iv2" fitHeight="150.0" fitWidth="200.0" layoutX="167.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" />
+
+            <Button fx:id="btDrücken1" layoutX="41.0" layoutY="90.0" mnemonicParsing="false" onAction="#drueckenBTandrej" prefHeight="25.0" prefWidth="99.0" text="FensterAndrej" />
+
          </children></AnchorPane>
    </children>
 </AnchorPane>

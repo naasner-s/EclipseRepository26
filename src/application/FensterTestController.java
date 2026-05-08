@@ -33,6 +33,7 @@ public class FensterTestController {
     private TextField tfAnzeige;
 
     @FXML
+<<<<<<< HEAD
     void btNoam(ActionEvent event) throws IOException {
     	AnchorPane meinBühnenbild;
 
@@ -56,6 +57,9 @@ public class FensterTestController {
 
     @FXML
     void drueckenSchaltflaeche(ActionEvent event) throws IOException 
+=======
+    void drueckenBTnaasner(ActionEvent event) throws IOException 
+>>>>>>> branchAndrej
     {
     	Stage stage2 = new Stage();
     	FXMLLoader loader = new FXMLLoader();
@@ -68,6 +72,23 @@ public class FensterTestController {
       
         stage2.showAndWait();
         tfAnzeige.setText(controller2.getText()); //Holt aus dem schließenden Fenster den Wert
+            	
+	}
+    
+    @FXML
+    void drueckenBTandrej(ActionEvent event) throws IOException 
+    {
+    	Stage stage2 = new Stage();
+    	FXMLLoader loader = new FXMLLoader();
+    	loader.setLocation(getClass().getResource("AndrejSeite.fxml"));
+    	Parent root = loader.load();
+        AndrejSeiteController controller2 = loader.getController();  //Braucht man nur, wenn man Werte aus dem neuen Fenster zurückgeben will
+        stage2.setScene(new Scene(root));
+        stage2.setTitle("Das ist Andrejs Fenster");
+        stage2.initModality(Modality.APPLICATION_MODAL); // Dann kann das alte Fenster nicht mehr aktiv sein
+      
+        stage2.showAndWait();
+        tfAnzeige.setText(controller2.getRückgabe()); //Holt aus dem schließenden Fenster den Wert
             	
 	}
  }
