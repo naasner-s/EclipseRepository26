@@ -1,9 +1,14 @@
 package application;
 
 import java.io.IOException;
+
 import java.util.Timer;
 import java.util.TimerTask;
 import javafx.scene.control.CheckBox;
+
+
+import javafx.css.CssParser.ParseError.StringParsingError;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -36,6 +41,9 @@ public class FensterTestController {
     @FXML
     private Button btNoam;
 
+    @FXML
+    private Button btDrücken2;
+    
     @FXML
     private TextField tfAnzeige;
     
@@ -136,6 +144,24 @@ public class FensterTestController {
     		
     	
     }
+	
+
+	@FXML
+    void drueckenSchaltflaeche2(ActionEvent event) throws IOException 
+    {
+    	Stage stage2 = new Stage();
+    	FXMLLoader loader = new FXMLLoader();
+    	loader.setLocation(getClass().getResource("RomanSeite.fxml"));
+    	Parent root = loader.load();
+    	RomanSeiteController controller2 = loader.getController();
+    	stage2.setScene(new Scene(root));
+        stage2.setTitle("Das ist das 2. Fenster");
+        stage2.initModality(Modality.APPLICATION_MODAL);
+        
+        stage2.showAndWait();
+        tfAnzeige.setText(String.valueOf(controller2.getText()));
+    }
+    
  }
 
 

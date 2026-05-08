@@ -10,6 +10,7 @@
    <children>
       <AnchorPane prefHeight="270.0" prefWidth="389.0">
          <children>
+
             <Button fx:id="btDrücken" layoutX="42.0" layoutY="27.0" mnemonicParsing="false" onAction="#drueckenBTnaasner" text="FensterNaasner" />
             <TextField fx:id="tfAnzeige" layoutX="67.0" layoutY="231.0" prefHeight="25.0" prefWidth="278.0" promptText="?" />
 
@@ -23,6 +24,8 @@
 
 
             <Button fx:id="btDrücken2" layoutX="41.0" layoutY="152.0" mnemonicParsing="false" onAction="#drueckenSchaltflaeche" prefHeight="25.0" prefWidth="99.0" text="FensterAmr" />
+            <Button fx:id="btDrücken2" layoutX="41.0" layoutY="185.0" mnemonicParsing="false" onAction="#drueckenSchaltflaeche2" prefHeight="25.0" prefWidth="99.0" text="FensterRoman" />
+
          </children></AnchorPane>
    </children>
 </AnchorPane>
