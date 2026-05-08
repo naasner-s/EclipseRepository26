@@ -1,7 +1,9 @@
 package application;
 
 import java.io.IOException;
-
+import java.util.Timer;
+import java.util.TimerTask;
+import javafx.scene.control.CheckBox;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -19,9 +21,14 @@ public class FensterTestController {
 	
 	Image bild;
 	
-	 @FXML
-	    private ImageView iv2;
+	@FXML
+	private ImageView iv2;
 
+    @FXML
+    private CheckBox cbAdrian;
+	
+    @FXML
+    private Button btFensterAdrian;
 	
     @FXML
     private Button btDrücken;
@@ -31,9 +38,25 @@ public class FensterTestController {
 
     @FXML
     private TextField tfAnzeige;
+    
+    @FXML
+    void WaechselnFensterAdi(ActionEvent event) throws IOException 
+    {
+    	Stage stage3 = new Stage();
+    	FXMLLoader loaderAdrian = new FXMLLoader();
+    	loaderAdrian.setLocation(getClass().getResource("FensterAdrian.fxml"));
+    	Parent rootAdrian = loaderAdrian.load();
+    	FensterAdrianController controller3 = loaderAdrian.getController();
+    	stage3.setScene(new Scene(rootAdrian));
+    	stage3.setTitle("Das ist Adrian's Fenster");
+    	stage3.initModality(Modality.APPLICATION_MODAL);
+    	
+    	stage3.showAndWait();
+    	tfAnzeige.setText(controller3.getText());
+    	cbAdrian.setSelected(controller3.getBool());
+    }
 
     @FXML
-<<<<<<< HEAD
     void btNoam(ActionEvent event) throws IOException {
     	AnchorPane meinBühnenbild;
 
@@ -56,10 +79,12 @@ public class FensterTestController {
     }
 
     @FXML
-    void drueckenSchaltflaeche(ActionEvent event) throws IOException 
-=======
+    void drueckenSchaltflaeche(ActionEvent event) throws IOException {
+	}
+
+    @FXML
     void drueckenBTnaasner(ActionEvent event) throws IOException 
->>>>>>> branchAndrej
+
     {
     	Stage stage2 = new Stage();
     	FXMLLoader loader = new FXMLLoader();

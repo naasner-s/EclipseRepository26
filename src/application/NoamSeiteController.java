@@ -13,13 +13,15 @@ import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 public class NoamSeiteController {
-	  @FXML
-	    private ImageView iv;
+	@FXML
+	private ImageView iv;
 
-	 @FXML
-	    private Button btSD;
-	 @FXML
-	    private TextField tfSD;
+	@FXML
+	private Button btSD;
+	
+	@FXML
+	private TextField tfSD;
+	 
 	@FXML
     private Slider sd;
 
