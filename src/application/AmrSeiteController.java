@@ -1,6 +1,5 @@
 package application;
 
-import javafx.scene.control.CheckBox;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -8,7 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class NaasnerSeiteController {
+public class AmrSeiteController {
     @FXML
     private Button btSchließen;
 
