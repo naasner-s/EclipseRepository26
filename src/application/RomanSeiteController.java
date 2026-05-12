@@ -1,36 +1,32 @@
 package application;
 
-import javafx.scene.control.CheckBox;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javafx.scene.control.Slider;
 
-public class NaasnerSeiteController {
+public class RomanSeiteController {
     @FXML
     private Button btSchließen;
 
     @FXML
-    private TextField tfText;
+    private Slider tfText;
     
     @FXML
-    private Button btDrücken2;
-
-    
-    @FXML
-    String schließenFenster(ActionEvent event) {
+    Double schließenFenster(ActionEvent event) {
     	
     	Stage stage = (Stage) btSchließen.getScene().getWindow();
-        stage.close();	
-        return tfText.getText();
+        stage.close();
+        return tfText.getValue();
     }
     
     
-    String getText()
+    Double getText()
     {
-    	return tfText.getText();
+    	return tfText.getValue();
     }
 
 
