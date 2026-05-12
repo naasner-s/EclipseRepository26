@@ -4,13 +4,13 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FensterTestController">
+<AnchorPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FensterTestController">
    <children>
       <AnchorPane prefHeight="270.0" prefWidth="389.0">
          <children>
             <Button fx:id="btDrücken" layoutX="42.0" layoutY="27.0" mnemonicParsing="false" onAction="#drueckenSchaltflaeche" text="FensterNaasner" />
             <TextField fx:id="tfAnzeige" layoutX="67.0" layoutY="231.0" prefHeight="25.0" prefWidth="278.0" promptText="?" />
-            <Button fx:id="btDrücken2" layoutX="42.0" layoutY="90.0" mnemonicParsing="false" onAction="#drueckenSchaltflaeche" text="FensterAmr" />
+            <Button fx:id="btDrücken2" layoutX="42.0" layoutY="90.0" mnemonicParsing="false" onAction="#druckenrückgabeAmr" text="FensterAmr" />
          </children></AnchorPane>
    </children>
 </AnchorPane>
